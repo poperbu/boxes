@@ -1,0 +1,13 @@
+fr1pdp_freeframe_param5_midi;
+fr1pdp_freeframe_index_up_midi;
+fr1pdp_freeframe_index_down_midi;
+fr1pdp_freeframe_index_midi;
+fr1pdp_freeframe_param6_midi;
+fr1pdp_freeframe_param7_midi;
+fr1pdp_freeframe_param8_midi;
+fr1pdp_freeframe_on_midi;
+fr1pdp_freeframe_param0_midi;
+fr1pdp_freeframe_param1_midi;
+fr1pdp_freeframe_param2_midi;
+fr1pdp_freeframe_param3_midi;
+fr1pdp_freeframe_param4_midi;

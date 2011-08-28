@@ -1,0 +1,12 @@
+#N canvas 33 76 1332 1065 10;
+#X obj 52 266 mb-midi_UMX25 2;
+#X text 89 471 mb-midi_monitor id;
+#X obj 54 495 mb-midi_monitor 2;
+#X obj 48 652 mb-midi_connections a;
+#X text 142 160 >>>>>>>>>>>>>>>>>>> M I D I B O X E S <<<<<<<<<<<<<<<<<<<<<<
+;
+#X text 297 234 mb-midi_UMX25 id;
+#X text 417 669 =>unfinished;
+#X obj 770 530 mb-midi_control_pad cc;
+#X text 815 499 mb-midi_control_pad id;
+#X obj 686 267 mb-midi_nanokontrol_mon nk;

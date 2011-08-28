@@ -1,0 +1,54 @@
+#N canvas 25 70 1891 1071 10;
+#X obj 56 779 mb-pdp_streaming_source;
+#X obj 378 198 mb-pdp_capture_video;
+#X text 462 174 mb-pdp_capture_video id;
+#X obj 1144 194 mb-pdp_open_qt_video;
+#X obj 48 1821 mb-midi_UMX25 2;
+#X text 168 471 mb-pdp_effects id;
+#X text 774 1806 mb-midi_monitor id;
+#X obj 38 496 mb-pdp_effects e;
+#X obj 684 1826 mb-midi_monitor 2;
+#X obj 658 17 cnv 15 400 60 empty empty Mandril_Boxes_v_0.0_BETA 40
+12 0 18 -99865 -228856 0;
+#X obj 685 46 cnv 15 100 30 empty empty by_musa.poperbu.net_2009 20
+12 0 14 -99865 -260097 0;
+#X obj 1270 499 mb-pdp2gem 2;
+#X text 1329 483 mb-pdp2gem id;
+#X obj 50 1229 mb-gem_window a;
+#X text 159 1203 mb-gem_window id;
+#X text 1235 171 mb-pdp_open_qt_video id;
+#X obj 1167 1224 mb-gem_pix_control_texture a;
+#X obj 1406 1221 mb-gem_pix_control_shapes b;
+#X text 1180 1202 mb-gem_pix_control_texture id;
+#X text 1458 1198 mb-gem_pix_control_shapes id;
+#X obj 1401 1431 mb-gem_pix_control_camera r;
+#X text 1450 1401 mb-gem_pix_control_camera id;
+#X obj 900 1228 mb-gem_pix_control_transform y;
+#X text 924 1204 mb-gem_pix_control_transform id;
+#X obj 449 1227 mb-gem_pix_effects a;
+#X text 594 1207 mb-gem_pix_effects id;
+#X text 135 1522 mb-gem_pix_open_video_file id;
+#X obj 1068 1462 mb-gem_pix_mixer q;
+#X obj 845 1540 mb-gem_pix_open_image_file r;
+#X obj 93 1542 mb-gem_pix_open_video_file a;
+#X text 834 1504 mb-gem_pix_open_image_file id;
+#X obj 942 492 mb-pdp_mixer h;
+#X obj 934 616 mb-pdp_mixer2 y;
+#X text 987 590 mb-pdp_mixer2 id;
+#X text 978 464 mb-pdp_mixer id;
+#X text 1119 1439 mb-gem_pix_mixer id;
+#X obj 39 199 mb-pdp_video_grid t;
+#X text 133 171 mb-pdp_video_grid id;
+#X obj 1031 1823 mb-midi_connections a;
+#X text 557 123 >>>>>>>>>>>>>>>>>>> P D P B O X E S <<<<<<<<<<<<<<<<<<<<<<
+;
+#X text 634 1144 >>>>>>>>>>>>>>>>>>> GEM PIX B O X E S <<<<<<<<<<<<<<<<<<<<<<
+;
+#X text 586 1748 >>>>>>>>>>>>>>>>>>> M I D I B O X E S <<<<<<<<<<<<<<<<<<<<<<
+;
+#X obj 743 198 mb-pdp_play_video r;
+#X obj 464 1527 mb-gem_pix_capture_video h;
+#X text 526 1498 mb-gem_pix_capture_video id;
+#X text 831 167 mb-pdp_play_video id;
+#X text 238 740 mb-pdp_streaming_source id;
+#X text 293 1789 mb-midi_UMX25 id;

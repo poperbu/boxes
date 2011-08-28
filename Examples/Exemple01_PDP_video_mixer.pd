@@ -1,0 +1,17 @@
+#N canvas 12 57 1501 797 10;
+#X obj 739 127 mb-pdp_capture_video a;
+#X obj 69 371 mb-pdp_open_qt_video b;
+#X obj 323 597 mb-pdp_mixer ab;
+#X obj 644 587 mb-pdp_play_video ab;
+#X obj 69 126 mb-pdp_video_grid b;
+#X obj 405 370 mb-pdp_open_qt_video c;
+#X obj 405 126 mb-pdp_video_grid c;
+#X obj 1055 509 mb-pdp_video_select x;
+#X obj 1117 122 mb-pdp_capture_video d;
+#X text 280 22 Exemple 1: pdp simple video mixer: live video \, video
+file pdp effects \, ...;
+#X connect 0 0 7 0;
+#X connect 4 0 1 0;
+#X connect 6 0 5 0;
+#X connect 7 0 3 0;
+#X connect 8 0 7 1;

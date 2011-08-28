@@ -1,0 +1,2 @@
+1 CTRL 2 fr1pdp_freeframe_param0_midi;
+1 CTRL 3 fr1pdp_freeframe_param1_midi;

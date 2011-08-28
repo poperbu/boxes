@@ -1,0 +1,151 @@
+#N canvas 206 272 1234 628 10;
+#X obj 605 -11 gemhead;
+#X obj 667 469 sphere 0.2;
+#X obj 742 471 cube 0.2;
+#X obj 605 66 mb-gem_part aa;
+#X obj 662 390 spigot;
+#X obj 698 366 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 737 386 spigot;
+#X obj 773 362 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 25 -110 world_light;
+#X obj 25 -138 gemhead;
+#X obj 131 -131 mmb-gem_window gw;
+#X floatatom 150 -61 5 0 0 0 - - -;
+#X obj 178 -56 hsl 128 15 -20 20 0 0 gwgemwin_movez empty gw_camera_z
+-2 8 0 8 -262144 -1 -1 0 1;
+#X floatatom 151 -75 5 0 0 0 - - -;
+#X obj 187 -75 hsl 128 15 -20 20 0 0 gwgemwin_movey empty gw_camera_y
+-2 8 0 8 -262144 -1 -1 0 1;
+#X floatatom 150 -91 5 0 0 0 - - -;
+#X obj 187 -90 hsl 128 15 -20 20 0 0 gwgemwin_movex empty gw_camera_x
+-2 8 0 8 -262144 -1 -1 0 1;
+#X msg 126 -88 1;
+#X msg 124 -62 20;
+#X floatatom 142 -34 5 0 0 0 - - -;
+#X obj 179 -33 hsl 128 15 -90 90 0 0 gwgemwin_turnlr empty gw_camera_horizrotate
+-2 8 0 8 -262144 -1 -1 0 1;
+#X floatatom 142 -16 5 0 0 0 - - -;
+#X obj 179 -15 hsl 128 15 -90 90 0 0 gwgemwin_turnud empty gw_camera_vertrotate
+-2 8 0 8 -262144 -1 -1 0 1;
+#X msg 111 -35 0;
+#X obj 409 -84 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 425 -68 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 377 -99 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X text 469 -127 camera position;
+#X obj 370 -49 mb-gem_chgemwin gw;
+#X obj 338 -27 s gwgemwin_extern_input;
+#X msg 343 -126 lighting 1;
+#X obj 627 22 translateXYZ;
+#X floatatom 673 -8 5 0 0 0 - - -;
+#X floatatom 710 -7 5 0 0 0 - - -;
+#X floatatom 747 -7 5 0 0 0 - - -;
+#X obj 462 540 cnv 15 160 160 empty empty empty 20 12 0 14 -24198 -66577
+0;
+#X obj 517 359 bng 15 250 50 0 empty empty pix_load 20 8 0 8 -262144
+-1 -1;
+#N canvas 4 54 587 366 image 0;
+#X obj 77 48 inlet;
+#X obj 77 344 outlet;
+#X obj 77 205 pix_image ../../doc/gem/examples/data/fractal.JPG;
+#X obj 223 55 inlet;
+#X msg 223 123 open \$1;
+#X obj 223 100 openpanel;
+#X text 312 85 re-send the image to the [pix_]-object;
+#X text 231 37 open;
+#X text 79 30 gemlist;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 5 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X restore 458 387 pd image;
+#X obj 463 710 pix_texture;
+#X text 523 379 open an image;
+#X text 516 392 (JPEG \, TIFF \, ..);
+#X msg 468 615 quality \$1;
+#X obj 468 596 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj 549 636 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X msg 549 655 rectangle \$1;
+#X obj 476 661 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj 549 596 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X msg 476 680 client_storage \$1;
+#X msg 549 615 repeat \$1;
+#X msg 500 571 env \$1;
+#X obj 501 551 hradio 15 1 0 6 empty empty empty 0 -6 0 8 -262144 -1
+-1 0;
+#X obj 479 496 pack 0 0 1;
+#X obj 459 517 color 0 0.5 0;
+#X obj 505 470 t b f;
+#X obj 506 451 nbx 3 14 0 1 0 0 empty empty green 0 -6 0 10 -262144
+-1 -1 0 256;
+#X obj 547 470 t b f;
+#X obj 548 451 nbx 3 14 0 1 0 0 empty empty blue 0 -6 0 10 -262144
+-1 -1 0 256;
+#X obj 465 470 nbx 3 14 0 1 0 0 empty empty red 0 -6 0 10 -262144 -1
+-1 0 256;
+#X text 464 423 set base fragment color;
+#X obj 461 327 spigot;
+#X obj 497 303 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 688 725 cube 0.2;
+#X connect 0 0 31 0;
+#X connect 3 1 4 0;
+#X connect 3 1 6 0;
+#X connect 3 1 59 0;
+#X connect 4 0 1 0;
+#X connect 5 0 4 1;
+#X connect 6 0 2 0;
+#X connect 7 0 6 1;
+#X connect 9 0 8 0;
+#X connect 12 0 11 0;
+#X connect 14 0 13 0;
+#X connect 16 0 15 0;
+#X connect 17 0 16 0;
+#X connect 17 0 14 0;
+#X connect 18 0 12 0;
+#X connect 20 0 19 0;
+#X connect 22 0 21 0;
+#X connect 23 0 20 0;
+#X connect 23 0 22 0;
+#X connect 24 0 28 1;
+#X connect 25 0 28 2;
+#X connect 26 0 28 0;
+#X connect 28 0 29 0;
+#X connect 30 0 29 0;
+#X connect 31 0 3 0;
+#X connect 32 0 31 1;
+#X connect 33 0 31 2;
+#X connect 34 0 31 3;
+#X connect 36 0 37 1;
+#X connect 37 0 52 0;
+#X connect 38 0 61 0;
+#X connect 41 0 38 0;
+#X connect 42 0 41 0;
+#X connect 43 0 44 0;
+#X connect 44 0 38 0;
+#X connect 45 0 47 0;
+#X connect 46 0 48 0;
+#X connect 47 0 38 0;
+#X connect 48 0 38 0;
+#X connect 49 0 38 0;
+#X connect 50 0 49 0;
+#X connect 51 0 52 1;
+#X connect 52 0 38 0;
+#X connect 53 0 51 0;
+#X connect 53 1 51 1;
+#X connect 54 0 53 0;
+#X connect 55 0 51 0;
+#X connect 55 1 51 2;
+#X connect 56 0 55 0;
+#X connect 57 0 51 0;
+#X connect 59 0 37 0;
+#X connect 60 0 59 1;

@@ -1,0 +1,39 @@
+#N canvas 263 76 1209 859 10;
+#X obj 275 237 mmb-pdp_open_qt_video ma;
+#X text 283 211 [mmb-pdp_open_qt_video ma];
+#X text 311 189 SOURCE_1: VIDEO FILE;
+#X obj 234 343 mmb-pdp_effects ef1;
+#X obj 644 344 mmb-pdp_freeframe_control fr1;
+#X text 295 314 PDP EFFECTS 1;
+#X text 273 326 [mmb-pdp_effects ef1];
+#X text 685 289 FreeFrame EFFECTS 1;
+#X text 633 313 [mmb-pdp_freeframe_control fr1];
+#X text 459 297 Frei0r EFFECTS 1;
+#X text 428 316 [mmb-pdp_frei0r_control f01];
+#X obj 430 345 mmb-pdp_frei0r_control f01;
+#X obj 460 233 mmb-pdp_mixer mx;
+#X obj 24 464 mmb-pdp_play_video pl1;
+#X text 41 14 Exemple 5: pdp video mixer + pdp effects + frei0r ef.
++ freeframe ef. + miniboxes +MIDI tools;
+#X text 249 448 MIDI MAPPING:;
+#X text 495 455 MIDI CONTROL DEVICE (monitoring);
+#X text 502 473 [mb-midi_nanokontrol_mon nk];
+#X obj 612 245 mmb-pdp_capture_video mb;
+#X text 634 198 SOURCE_2: VIDEO DEVICE;
+#X text 626 217 [mmb-pdp_capture_video mb];
+#X text 250 474 [mb-midi_control_pad_v2 cp];
+#X obj 226 504 mb-midi_control_pad cp2;
+#X obj 535 507 mb-midi_nanokontrol_mon nk;
+#X floatatom 600 301 5 0 0 0 - - -;
+#X text 543 657 You can load the nanokontrol map files (data folder)
+in MIDI_contro_pad to control the effects boxes with your nanocontrol.
+;
+#X obj 33 101 playlist mov 200 200 {Helvetica 9 bold} #606060 orange
+white red;
+#X symbolatom 33 307 40 0 0 0 - - -;
+#X connect 0 0 12 0;
+#X connect 4 0 13 0;
+#X connect 18 0 4 0;
+#X connect 24 0 11 3;
+#X connect 26 0 27 0;
+#X connect 26 0 0 0;
