@@ -1,0 +1,152 @@
+#N canvas 1 50 1918 1062 10;
+#X msg 187 685 color 0 0.833333 0.243446;
+#X msg 186 655 set color \$1 \$2 \$3;
+#X obj 171 737 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 246 59 arg1 must be the same id of gemwindow.;
+#X obj 210 714 s \$1gemwin_extern_input;
+#X obj 137 2 cnv 15 50 15 empty \$0label empty 4 11 0 8 -3408 -258737
+0;
+#X obj 5 34 hsl 179 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 6800 0;
+#X obj 5 18 hsl 179 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 0;
+#X msg 630 184 nopoll;
+#X obj 636 144 sel 0;
+#X msg 521 171 zero \, poll;
+#X msg 680 171 1;
+#X obj 518 73 spigot 1;
+#X msg 603 103 0;
+#X obj 536 297 +;
+#X obj 519 138 t b b f;
+#X obj 361 617 s \$0label;
+#X obj 3 34 cnv 15 20 15 empty empty empty 20 12 0 14 -258049 -66577
+0;
+#X obj 3 19 cnv 15 20 15 \$0cnv_s \$0cnv_r empty 20 12 0 14 -131073
+-66577 0;
+#X obj 60 34 cnv 15 35 15 empty empty empty 20 12 0 14 -24198 -66577
+0;
+#X obj 60 18 cnv 15 35 15 empty empty empty 20 12 0 14 -22726 -66577
+0;
+#X obj 168 33 cnv 15 20 15 empty empty empty 20 12 0 14 -258049 -66577
+0;
+#X obj 167 18 cnv 15 20 15 empty empty empty 20 12 0 14 -131073 -66577
+0;
+#X obj 24 34 cnv 15 35 15 empty empty empty 20 12 0 14 -241291 -66577
+0;
+#X obj 24 18 cnv 15 35 15 empty empty empty 20 12 0 14 -166411 -66577
+0;
+#X obj 96 18 cnv 15 35 15 empty empty empty 20 12 0 14 -32 -66577 0
+;
+#X obj 96 35 cnv 15 35 15 empty empty empty 20 12 0 14 -64 -66577 0
+;
+#X obj 132 33 cnv 15 35 15 empty empty empty 20 12 0 14 -258112 -66577
+0;
+#X obj 132 18 cnv 15 35 15 empty empty empty 20 12 0 14 -135202 -66577
+0;
+#X obj 422 260 f;
+#X obj 392 37 t f b f;
+#X obj 357 106 t f b f;
+#X msg 474 76 20;
+#X obj 6 49 hsl 179 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 0;
+#X obj 3 49 cnv 15 20 15 empty empty empty 20 12 0 14 -261689 -66577
+0;
+#X obj 60 49 cnv 15 35 15 empty empty empty 20 12 0 14 -225271 -66577
+0;
+#X obj 168 49 cnv 15 20 15 empty empty empty 20 12 0 14 -261689 -66577
+0;
+#X obj 24 49 cnv 15 35 15 empty empty empty 20 12 0 14 -262131 -66577
+0;
+#X obj 96 49 cnv 15 35 15 empty empty empty 20 12 0 14 -228992 -66577
+0;
+#X obj 132 49 cnv 15 35 15 empty empty empty 20 12 0 14 -257472 -66577
+0;
+#X msg 455 169 30;
+#X obj 243 175 t b f;
+#X obj 539 340 moses 30;
+#X obj 534 381 / 30;
+#X obj 422 286 pack f f f;
+#X obj 463 247 unpack;
+#X obj 453 219 t b a;
+#X obj 591 400 / 30;
+#X obj 538 318 clip 0 60;
+#X msg 532 409 1 \$1;
+#X msg 592 433 \$1 1;
+#X obj 631 471 -;
+#X msg 663 473 2 \$1;
+#X obj 342 564 pack;
+#X msg 335 592 color \$1 \$2;
+#X obj 379 447 * -1;
+#X msg 303 236 50;
+#X obj -78 619 outlet float_RGB;
+#X obj 230 616 outlet pd_color;
+#X obj 213 540 t a a;
+#X obj 57 407 t a a a a;
+#X obj 379 421 - 1;
+#X obj 600 210 cyclone/MouseState;
+#X obj 307 424 ./listOp;
+#X obj 308 499 ./rgbToNum;
+#X obj 145 485 ./rgbToNum;
+#X obj 5 341 ./hsvToRgb;
+#X text 149 -61 copy of mtl colorgrid;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 6 0 31 0;
+#X connect 7 0 30 0;
+#X connect 8 0 62 0;
+#X connect 9 0 8 0;
+#X connect 9 0 11 0;
+#X connect 10 0 62 0;
+#X connect 11 0 12 1;
+#X connect 12 0 15 0;
+#X connect 13 0 12 1;
+#X connect 14 0 48 0;
+#X connect 15 0 10 0;
+#X connect 15 1 13 0;
+#X connect 15 2 14 1;
+#X connect 29 0 44 0;
+#X connect 30 1 32 0;
+#X connect 30 2 29 1;
+#X connect 31 1 40 0;
+#X connect 31 2 29 1;
+#X connect 32 0 12 0;
+#X connect 33 0 41 0;
+#X connect 40 0 12 0;
+#X connect 41 0 56 0;
+#X connect 41 1 29 1;
+#X connect 42 0 43 0;
+#X connect 42 1 47 0;
+#X connect 43 0 49 0;
+#X connect 44 0 66 0;
+#X connect 45 0 44 1;
+#X connect 45 1 44 2;
+#X connect 46 0 29 0;
+#X connect 46 1 45 0;
+#X connect 47 0 52 0;
+#X connect 48 0 42 0;
+#X connect 49 0 46 0;
+#X connect 50 0 46 0;
+#X connect 51 0 50 0;
+#X connect 52 0 51 0;
+#X connect 53 0 54 0;
+#X connect 54 0 16 0;
+#X connect 55 0 63 1;
+#X connect 56 0 12 0;
+#X connect 59 0 58 0;
+#X connect 59 1 53 0;
+#X connect 60 0 57 0;
+#X connect 60 0 1 0;
+#X connect 60 2 65 0;
+#X connect 60 3 63 0;
+#X connect 61 0 55 0;
+#X connect 62 0 9 0;
+#X connect 62 2 14 0;
+#X connect 63 0 64 0;
+#X connect 63 1 61 0;
+#X connect 64 0 53 1;
+#X connect 65 0 59 0;
+#X connect 66 0 60 0;
+#X coords 0 -1 1 1 190 65 1 0 0;
